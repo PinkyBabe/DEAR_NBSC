@@ -355,9 +355,8 @@
 <!-- Falling leaves, drawn continuously in the background -->
 <canvas id="leafCanvas" aria-hidden="true"></canvas>
 
-<!-- Background music. File lives in this repo, next to index.html. -->
-<audio id="bgMusic" loop preload="none">
-  <source src="bg.mp3" type="audio/mpeg">
+<audio id="bgMusic" loop preload="auto">
+  <source src="yeah.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Entrance: the "wax seal" opens the letter and starts the music -->
@@ -574,7 +573,7 @@
     audio.play().then(function(){
       showStatus('now playing');
     }).catch(function(){
-      showStatus('music link unavailable');
+      showStatus('music unavailable');
     });
   }
 
@@ -593,7 +592,7 @@
   });
 
   audio.addEventListener('error', function(){
-    showStatus('music link unavailable');
+    showStatus('music unavailable');
   });
 
 })();
